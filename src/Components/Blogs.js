@@ -16,7 +16,7 @@ function Blogs() {
           </div>) :
           (posts.map ( (post) => (
             <div>
-                    <p>{post.title}</p>
+                    <p> {post.title}</p>
 
                     <p>
                       By <span>{post.author}</span> On <span>{post.category}</span>
