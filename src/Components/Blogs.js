@@ -6,9 +6,9 @@ function Blogs() {
   const {posts, loading} = useContext(AppContext)
 
   return (
-    <div>
+    <div className='w-11/12 max-w-[670px] h-screen py-8 flex flex-col gap-y-7  mt-[300px]  mb-[350px]   justify-center items-center'>
       {
-        loading ? (<Spinner />) :
+        loading ? (<Spinner />) :  
         (
           posts.length === 0 ? 
           (<div>
@@ -16,17 +16,17 @@ function Blogs() {
           </div>) :
           (posts.map ( (post) => (
             <div>
-                    <p> {post.title}</p>
+                    <p className="text-lg font-bold "> {post.title}</p>
 
-                    <p>
+                    <p className='text-sm mt-[4px]'>
                       By <span>{post.author}</span> On <span>{post.category}</span>
                     </p>
-                    <p>Posted On {post.date} </p>
-                    <p>{post.content} </p>
+                    <p className='text-sm mt-[4px]'>Posted On {post.date} </p>
+                    <p className='text-md mt-[14px]'>{post.content} </p>
 
-                    <div>
+                    <div className='flex gap-x-3'>
                       {post.tags.map( (tag, index) => {
-                        return <span key={index}> {`#${tag}`}</span>
+                        return <span key={index} className="text-blue-700 underline font-bold text-xs mt-[5px]"> {`#${tag}`}</span>
                       })}
                     </div>
             </div>
