@@ -43,9 +43,21 @@ export default function AppContextProvider({ children }) {
     }
 
 
+    const values = {
+        loading,
+        setloading,
+        posts,
+        setPosts,
+        page,
+        setPage,
+        totalPages,
+        setTotalPages,
+        fetchBlogPosts,
+        handlePageChange
+    }
 
 
-    return <AppContext.Provider>
+    return <AppContext.Provider value={values}>
         {children}
     </AppContext.Provider>
 
