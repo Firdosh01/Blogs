@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation, useNavigation } from 'react-router-dom'
 import Header from '../Header';
 import Blogs from '../Blogs';
-import Pagination from '../../Pagination';
+import Pagination from '../Pagination';
 
 function TagPage() {
   const navigation = useNavigation();
