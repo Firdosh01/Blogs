@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Header';
-import Blogs from './Components/Blogs';
-import Pagination from './Pagination';
 import { AppContext } from './Components/context/AppContext';
 import { useEffect, useContext } from 'react';
 import { Route, Routes, useLocation, useSearchParams } from 'react-router-dom';
 import Home from './Components/Pages/Home';
+import BlogPage from './Components/Pages/BlogPage';
+import TagPage from './Components/Pages/TagPage';
+import CategoryPage from './Components/Pages/CategoryPage';
 
 
 function App() {
