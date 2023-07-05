@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { baseUrl } from "../../baseUrl";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -12,6 +13,7 @@ export default function AppContextProvider({ children }) {
     const [posts, setPosts] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(null)
+    const navigate = useNavigate()
 
 
     async function fetchBlogPosts (page = 1, tag=null, category) {
@@ -47,9 +49,10 @@ export default function AppContextProvider({ children }) {
     }
 
     function handlePageChange(page) {
+        navigate({search: `page=${page}`})
         setPage(page);
-        console.log(page);
-        fetchBlogPosts(page);
+        // console.log(page);
+        // fetchBlogPosts(page);
     }
 
 

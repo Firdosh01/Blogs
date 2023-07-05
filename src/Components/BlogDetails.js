@@ -16,6 +16,14 @@ function BlogDetails({post}) {
         </p>
         <p>Posted on {post.date}</p>
         <p>{post.content}</p>
+        <div>
+          {post.tags.map((tag, index) => (
+              <NavLink key={index} to={`/tags/${tag.replaceAll(" ", "-")}`}>
+                <span>{`#${tag}`}</span>
+              </NavLink>
+            ))
+          }
+        </div>
     </div>
   )
 }

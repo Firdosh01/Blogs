@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from '../Header'
-import { useLocation, useNavigation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Blogs from '../Blogs';
 import Pagination from '../Pagination';
 
 function CategoryPage() {
 
-  const navigation = useNavigation();
+  const navigation = useNavigate();
   const location = useLocation();
   const category = location.pathname.split("/").at(-1);
 

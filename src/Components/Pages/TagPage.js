@@ -1,11 +1,11 @@
 import React from 'react'
-import { useLocation, useNavigation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import Header from '../Header';
 import Blogs from '../Blogs';
 import Pagination from '../Pagination';
 
 function TagPage() {
-  const navigation = useNavigation();
+  const navigation = useNavigate();
   const location = useLocation();
   const tag = location.pathname.split("/").at(-1);
 

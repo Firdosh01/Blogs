@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-import { useLocation, useNavigation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext';
 import { useContext } from 'react';
 import Header from '../Header';
@@ -12,7 +12,7 @@ function BlogPage() {
   const [blog, setBlog] = useState(null)
   const [relatedblogs, setRelatedBlogs] = useState([]);
   const location = useLocation();
-  const navigation = useNavigation();
+  const navigation = useNavigate();
   const {setLoading, loading} = useContext(AppContext)
   const blogId = location.pathname.split("/").at(-1)
 
