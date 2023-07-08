@@ -7,7 +7,7 @@ function Blogs() {
   const {posts, loading} = useContext(AppContext)
 
   return (
-    <div className='flex flex-col my-4 gap-y-7'>
+    <div className='flex flex-col my-[100px] gap-y-10'>
       {
         loading ? (<Spinner />) :  
         (
